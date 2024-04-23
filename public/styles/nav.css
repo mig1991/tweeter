@@ -1,0 +1,32 @@
+/* nav.css */
+
+nav {
+  height: 120px; /* Set the height of the nav */
+  width: 100vw; /* Make the nav full width of the viewport */
+  background-color: #4056A1; /* Set the default background color */
+  color: #FFFFFF; /* Set the default font color */
+  padding: 0 1.5em; /* 1.5ems of space on the right and left */
+  display: flex;
+  align-items: center; /* Center the content vertically */
+  justify-content: space-between; /* Space out any child elements */
+}
+
+.brand {
+  font-family: 'Bungee', sans-serif; /* Ensure Bungee is the font for the brand span */
+  font-size: 34px; /* Increase font size to 24px */
+  position: relative;
+  top: 20px; /* Move the text down by 10 pixels */
+  font-weight: bold; /* Optional: Makes the text bold */
+}
+
+.tweet-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.tweet-icon {
+  font-size: 1.0em; /* Size of the icon */
+  color: red; /* Color of the icon */
+}
