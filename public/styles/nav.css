@@ -13,10 +13,14 @@ nav {
 
 .brand {
   font-family: 'Bungee', sans-serif; /* Ensure Bungee is the font for the brand span */
-  font-size: 34px; /* Increase font size to 24px */
+  font-size: 34px; /* Increase font size to 34px */
   position: relative;
   top: 20px; /* Move the text down by 10 pixels */
   font-weight: bold; /* Optional: Makes the text bold */
+}
+
+nav > span {
+  font-family: 'Bungee', sans-serif; /* Ensure Bungee is the font for the span inside nav */
 }
 
 .tweet-indicator {
