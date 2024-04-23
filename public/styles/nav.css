@@ -1,6 +1,7 @@
 /* nav.css */
 
 nav {
+  position: fixed;
   height: 120px; /* Set the height of the nav */
   width: 100vw; /* Make the nav full width of the viewport */
   background-color: #4056A1; /* Set the default background color */
@@ -9,6 +10,9 @@ nav {
   display: flex;
   align-items: center; /* Center the content vertically */
   justify-content: space-between; /* Space out any child elements */
+  z-index: 1000;  /* High z-index to keep nav on top */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);  /* Subtle shadow for 3D effect */
+
 }
 
 .brand {
@@ -17,10 +21,6 @@ nav {
   position: relative;
   top: 20px; /* Move the text down by 10 pixels */
   font-weight: bold; /* Optional: Makes the text bold */
-}
-
-nav > span {
-  font-family: 'Bungee', sans-serif; /* Ensure Bungee is the font for the span inside nav */
 }
 
 .tweet-indicator {
@@ -33,4 +33,9 @@ nav > span {
 .tweet-icon {
   font-size: 1.0em; /* Size of the icon */
   color: red; /* Color of the icon */
+}
+
+.header-avatar {
+  display: flex;
+  align-items: center;
 }
