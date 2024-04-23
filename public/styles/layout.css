@@ -28,3 +28,10 @@ nav > span {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
+  main {
+  width: 90%; /* Sets the width to 90% of its parent element, typically the body */
+  margin: 0 auto; /* Centers the main block horizontally */
+  background-color: inherit; /* Inherits the background color from the body element */
+  padding: 20px; /* Adds padding inside the main element for better content spacing */
+  box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}

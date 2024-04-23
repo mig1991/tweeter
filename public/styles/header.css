@@ -4,21 +4,18 @@
   padding: 0;
 }
 
-
-
 header {
   display: flex; /* Enables Flexbox layout mode */
   flex-direction: column; /* Stacks children (img and h2) vertically */
   justify-content: center; /* Centers children vertically in the header */
   align-items: center; /* Centers children horizontally in the header */
-  height: 400px; /* Sets a fixed height for the header */
+  height: 520px; /* Sets a fixed height for the header */
   width: 100%; /* Ensures the header extends full width of the viewport */
-  background-color: #668B8B; /* Sets a distinctive background color */
-  margin-top: 120px; /* Pushes the header down to make space for the fixed navbar */
+  background-color: #cc8800;
+  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+  margin-top: 0px; /* Pushes the header down to make space for the fixed navbar */
   box-sizing: border-box; /* Includes padding and border in the width and height */
 }
-
-
 
 header h2 {
   color: #FFFFFF; /* Sets text color to white */
@@ -29,5 +26,5 @@ header h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 3000px;
+  padding-top:150px;
 }
