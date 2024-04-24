@@ -1,0 +1,41 @@
+#tweets-container {
+  width: 96%; /* Ensures the container takes the full width of its parent */
+  margin: 0 auto; /* Centers the container within the main element */
+  border: 3px solid black;
+  min-height: 250px; /* Ensures a minimum height for visibility */
+  position: relative; /* Necessary for positioning the pseudo-element */
+  padding-bottom: 50px; /* Ensure there is padding to avoid content touching the line */
+}
+
+#tweets-container::after {
+  content: ""; /* Required for pseudo-elements */
+  position: absolute;
+  left: 2%;
+  right: 2%;
+  bottom: 30px; /* Positions the line 20% from the bottom of the container */
+  height: 3px; /* Height of the black line */
+  background-color: black; /* Color of the line */
+}
+
+.tweet header {
+  align-items: center; /* Center items vertically within the header */
+}
+
+.tweet footer {
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  justify-content: flex-end;
+}
+
+.tweet footer span {
+  cursor: pointer;
+  padding: 0 5px; /* Padding around icons for easier clicking */
+}
+
+.tweet p {
+  margin-top: auto;  /* This should push it towards the bottom part of .tweet */
+  padding-bottom: 100px;  /* Ensures some space from the bottom */
+}
+
+

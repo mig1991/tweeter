@@ -1,10 +1,3 @@
-/* Global reset for padding, margin, and box-sizing */
-*, *::before, *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 html, body {
   width: 100%;
   height: 100%;
@@ -75,15 +68,17 @@ header, .new-tweet {
 }
 
 .new-tweet .counter {
+  display: flex;
   text-align: right;
   font-family: 'Bungee', sans-serif;
-  align-self: center; /* Align to the right */
+  align-self: flex-end; /* Align to the right */
   margin-left: auto; /* Pushes it to the right */
 
 }
 
 .form-controls {
   display: flex;
-  justify-content: space-between; 
-  font-size: 1em;/* Space between button and counter */
+  justify-content: space-between;
+  align-items: center; 
+  width: 100%; 
 }
