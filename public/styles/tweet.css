@@ -86,14 +86,15 @@ header h2 .fa-robot {
   font-size: 0.9em;
 }
 
-.tweet footer .icons i {
+.tweet-container .footer-icons i {
   cursor: pointer;
   padding: 0 5px;
 }
 
-.tweet footer .icons i:hover {
-  color: #007bff; 
-} */
+.tweet-container .footer-icons i:hover {
+  color: #cc9900;  /* Change the color on hover to dark yellow */
+}
+
 
 
 
