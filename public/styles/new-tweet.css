@@ -1,0 +1,88 @@
+/* Global reset for padding, margin, and box-sizing */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+header, .new-tweet {
+  width: 100%; /* Ensures header and section take full width */
+}
+
+.new-tweet {
+  display: flex;
+  flex-direction: column;
+  background-color: inherit;
+  padding: 20px;
+  /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
+}
+
+/* Other styles remain the same */
+
+
+.new-tweet h2 {
+  color: #333;
+  font-family: 'Source Sans 3', sans-serif;
+  margin-bottom: 10px;
+}
+
+.new-tweet form {
+  display: flex;
+  flex-direction: column;
+}
+
+#tweet-text {
+  font-family: 'Source Sans 3', sans-serif;
+  padding: 5px 10px;
+  border: none;  /* Removes all borders except the bottom one */
+  border-bottom: 3px solid black;  /* Solid bottom border */
+  background-color: transparent;
+  height: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  resize: none;
+
+  /* Applying shadow only to the bottom border */
+  box-shadow: 0px 5px 2px -2px rgba(0, 0, 0, 0.2);
+}
+
+#tweet-text:focus {
+  outline: none; /* Removes the default focus outline */
+
+}
+
+.new-tweet button {
+  font-family: 'Bungee', sans-serif; /* Bungee font for the button */
+  background-color: #4056A1;
+  color: white;
+  border: none;
+  /* padding: 10px 20px; */
+  border-radius: 2px;
+  cursor: pointer;
+  width: 110px; /* Fixed width */
+  height: 40px;
+  align-self: flex-start; /* Align to the left */
+  margin-top: 19px;
+
+}
+
+.new-tweet button:hover {
+  background-color: #45a049;
+}
+
+.new-tweet .counter {
+  text-align: right;
+  font-family: 'Source Sans 3', sans-serif;
+  align-self: flex-end; /* Align to the right */
+  margin-left: auto; /* Pushes it to the right */
+}
+
+.form-controls {
+  display: flex;
+  justify-content: space-between; /* Space between button and counter */
+}

@@ -22,6 +22,8 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <!-- new tweet form -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
   </head>
 
@@ -39,15 +41,20 @@
     <img src="/images/profile-hex.png" alt="Profile Avatar" class="header-avatar">
     <h2>Your Name</h2> <!-- Ensure proper heading for the name -->
 </header>
+
 <main>
-  <h1>Main Content Heading</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. Vestibulum tempor nunc nec felis scelerisque eget elementum erat dignissim. Ut vel ipsum mollis orci venenatis luctus. Aenean vehicula, quam vel venenatis sagittis, nisi libero venenatis orci, sed accumsan quam sapien ut libero. Integer non ante ut ipsum placerat accumsan.</p>
-  <h2>Subheading</h2>
-  <p>Proin sodales libero eget ante nullam fermentum sollicitudin. Quisque venenatis, metus vel malesuada blandit, velit magna sit amet magna fermentum vel, malesuada sit amet velit. Donec non dui vitae mauris laoreet consequat. Cras non lorem posuere nulla tincidunt comodo sit amet vel nulla.</p>
-  <h2>Another Subheading</h2>
-  <p>Integer faucibus, est ac scelerisque vestibulum, ipsum odio fermentum massa, sed euismod neque libero eu mi. Nulla ac fringilla est. Sed sed luctus risus. Aliquam pharetra, purus tincidunt vestibulum dapibus, sapien lorem viverra sapien, sit amet gravida turpis lectus eget lorem. Nulla varius consequat magna, id molestie ipsum volutpat quis. Suspendisse consectetur fringilla luctus. Fusce id mi diam, non ornare orci.</p>
-  <h2>Final Thoughts</h2>
-  <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus quis tincidunt dolor. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+  <!-- The section for new tweet form is correctly placed inside the main tag -->
+  <section class="new-tweet">
+    <h2>Compose Tweet</h2>
+    <form>
+      <label for="tweet-text">What are you humming about?</label>
+      <textarea name="text" id="tweet-text"></textarea>
+      <div class="form-controls">
+        <button type="submit">Tweet</button>
+        <output name="counter" class="counter" for="tweet-text">140</output>
+      </div>
+    </form>
+  </section>
 </main>
     <!-- Page-specific (main) content here -->
     <!-- <main class="container"></main> -->
