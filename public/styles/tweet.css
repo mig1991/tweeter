@@ -1,0 +1,73 @@
+/* tweets.css */
+
+/* Adjustments for tweet container */
+#tweets-container {
+  width: 96%;
+  margin: 0 auto;
+  border: 3px solid black;
+  min-height: 250px;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+#tweets-container::after {
+  content: "";
+  position: absolute;
+  left: 2%;
+  right: 2%;
+  bottom: 30px;
+  height: 3px;
+  background-color: black;
+}
+
+/* Styling for tweet element */
+.tweet {
+  border-bottom: 1px solid #ccc; /* Add a bottom border to separate tweets */
+  padding: 15px; /* Add padding to the tweet content */
+  position: relative; /* Set position to relative */
+}
+
+.tweet header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.tweet header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.tweet header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.tweet header p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.tweet .content {
+  margin-bottom: 10px; /* Add space between content and footer */
+}
+
+.tweet footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 1.2em;
+}
+
+.tweet footer span {
+  cursor: pointer;
+  padding: 0 5px;
+}
+
+.tweet p {
+  margin: 0; /* Reset margin */
+  font-size: 16px; /* Adjust font size */
+}
