@@ -15,15 +15,15 @@
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <!-- Link to nav.css -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <!-- new tweet form -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+        <!-- link to your char counter -->
+        <script src="scripts/composer-char-counter.js" defer></script>
 
   </head>
 
@@ -46,17 +46,18 @@
   <!-- The section for new tweet form is correctly placed inside the main tag -->
   <section class="new-tweet">
     <h2>Compose Tweet</h2>
-    <form>
+    <form method="POST" action="/tweets/">
       <label for="tweet-text">What are you humming about?</label>
       <textarea name="text" id="tweet-text"></textarea>
       <div class="form-controls">
         <button type="submit">Tweet</button>
         <output name="counter" class="counter" for="tweet-text">140</output>
-      </div>
+    </div>
     </form>
   </section>
 </main>
     <!-- Page-specific (main) content here -->
+
     <!-- <main class="container"></main> -->
 </body>
 </html>

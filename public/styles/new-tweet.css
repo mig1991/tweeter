@@ -61,13 +61,12 @@ header, .new-tweet {
   background-color: #4056A1;
   color: white;
   border: none;
-  /* padding: 10px 20px; */
   border-radius: 2px;
   cursor: pointer;
   width: 110px; /* Fixed width */
   height: 40px;
-  align-self: flex-start; /* Align to the left */
-  margin-top: 19px;
+  align-self: center; /* Align to the left */
+  margin-top: 15px;
 
 }
 
@@ -77,12 +76,14 @@ header, .new-tweet {
 
 .new-tweet .counter {
   text-align: right;
-  font-family: 'Source Sans 3', sans-serif;
-  align-self: flex-end; /* Align to the right */
+  font-family: 'Bungee', sans-serif;
+  align-self: center; /* Align to the right */
   margin-left: auto; /* Pushes it to the right */
+
 }
 
 .form-controls {
   display: flex;
-  justify-content: space-between; /* Space between button and counter */
+  justify-content: space-between; 
+  font-size: 1em;/* Space between button and counter */
 }

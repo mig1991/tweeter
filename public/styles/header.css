@@ -11,8 +11,9 @@ header {
   align-items: center; /* Centers children horizontally in the header */
   height: 520px; /* Sets a fixed height for the header */
   width: 100%; /* Ensures the header extends full width of the viewport */
-  background-color: #cc8800;
-  background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png");
+  background-color: #8900bf;
+  background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   margin-top: 0px; /* Pushes the header down to make space for the fixed navbar */
   box-sizing: border-box; /* Includes padding and border in the width and height */
 }
