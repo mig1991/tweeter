@@ -57,25 +57,30 @@ const createTweetElement = function(tweet) {
   timeAgo = "Posted " + timeAgo + " Days Ago";
   // using template literals
   let $tweet = $(`
-      <article class="tweet-container">
-      <header>
-  
-          <h2><img src="${user.avatars}" alt="User avatar" class="tweet-avatar">${user.name}</h2>
-          <h3>${user.handle}</h3>
-      </header>
-      <div class="tweet-content">
-          <p>${content.text}</p>
+  <article class="tweet-container">
+  <header>
+      <div class="tweet-header-left">
+          <img src="${user.avatars}" alt="User avatar" class="tweet-avatar">
+          <h2>${user.name}</h2>
       </div>
-      <footer>
-          <h3>${timeAgo}</h3>
-          <div class="footer-icons">
-              <i class="fas fa-heart"></i>
-              <i class="fas fa-flag"></i>
-              <i class="fas fa-retweet"></i>
-              <i class="fas fa-share"></i>
-          </div>
-      </footer>
-    </article>
+      <div class="tweet-header-right">
+          <h3>${user.handle}</h3>
+      </div>
+  </header>
+  <div class="tweet-content">
+      <p>${content.text}</p>
+  </div>
+  <footer>
+      <h3>${timeAgo}</h3>
+      <div class="footer-icons">
+          <i class="fas fa-heart"></i>
+          <i class="fas fa-flag"></i>
+          <i class="fas fa-retweet"></i>
+          <i class="fas fa-share"></i>
+      </div>
+  </footer>
+</article>
+
   `);
 
   return $tweet;

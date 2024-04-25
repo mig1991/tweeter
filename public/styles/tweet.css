@@ -18,6 +18,7 @@
 
 
 .tweet-container header {
+  display: flex;
   flex-direction: row;
   height: 50px;
   background-image: none;
@@ -25,31 +26,35 @@
   justify-content: space-between;
   align-items: center;
   color: black;
+  width: 100%;
+  margin-top: 20px;
   /* padding: 20px; */
 }
 
 .tweet-container header h2 {
+  display: flex;
   font-family: 'Source Sans 3', sans-serif; /* Assuming you want to use this font */
   font-size: 24px; /* Example size, adjust as needed */
-  margin-top: 0;
+  margin-top: 10;
   padding-top: 0;
   color: black;
 }
 
 .tweet-container header h2 {
-  display: flex;
-  justify-content: space-between;
-  margin-right: 10px;
+  margin-top: 0;
+
 }
 
-header h2 .fa-robot {
-  margin-right: 8px; /* Adjust the value as needed */
+.tweet-container header h1 {
+
 }
 
 .tweet-container header h3 {
+  display: flex;
+  justify-content: space-between;
   font-family: 'Source Sans 3', sans-serif; /* Assuming you want to use this font */
   font-size: 24px; /* Example size, adjust as needed */
-  margin-top: 0;
+  margin-top: 10;
   padding-top: 0;
   color: grey;
 }
@@ -96,9 +101,22 @@ header h2 .fa-robot {
   color: #cc9900;  /* Change the color on hover to dark yellow */
 }
 
+.tweet-container header h2 img {
+  margin-right: 10px; /* Add space between the avatar and the username */
+}
 
+.tweet-header-left, .tweet-header-right {
+  display: flex;
+  align-items: center; /* Centers the text and avatar vertically */
+}
 
+.tweet-avatar {
+  margin-right: 10px; /* Space between the avatar and the name */
+}
 
+.tweet-header-right {
+  justify-content: flex-end; /* Aligns the handle to the right */
+}
 /* .tweet {
   border-bottom: 1px solid #ccc;
   padding: 30px 15px;
