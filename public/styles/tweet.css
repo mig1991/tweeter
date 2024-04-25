@@ -7,6 +7,7 @@
   align-items: stretch; /* Aligns children to stretch to the container's width */
   border: 4px solid black;
   padding: 20px;
+  margin: 10px;
   min-height: 250px;
   transition: box-shadow 0.3s ease-in-out; /* Smooth transition for the shadow effect */
 }

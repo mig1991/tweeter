@@ -53,13 +53,14 @@ const createTweetElement = function(tweet) {
   // format the creation date using JavaScript's Date constructor
   const dateCreated = new Date(created_at);
   const currentDate = new Date();
-  const timeAgo = Math.floor((currentDate - dateCreated) / (1000 * 60 * 60 * 24)); 
+  let timeAgo = Math.floor((currentDate - dateCreated) / (1000 * 60 * 60 * 24));
+  timeAgo = "Posted " + timeAgo + " Days Ago";
   // using template literals
   let $tweet = $(`
       <article class="tweet-container">
       <header>
-      <img src="${user.avatars}" alt="User avatar" class="tweet-avatar">
-          <h2>${user.name}</h2>
+  
+          <h2><img src="${user.avatars}" alt="User avatar" class="tweet-avatar">${user.name}</h2>
           <h3>${user.handle}</h3>
       </header>
       <div class="tweet-content">
@@ -75,7 +76,6 @@ const createTweetElement = function(tweet) {
           </div>
       </footer>
     </article>
-    
   `);
 
   return $tweet;
