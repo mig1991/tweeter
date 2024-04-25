@@ -1,14 +1,21 @@
 /* eslint-disable */
 
-/*
 
 
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-// Fake data taken from initial-tweets.json
 
+function isTweetValid(tweetText) {
+  tweetText = tweetText.trim(); // Trim whitespace
+
+  if (tweetText.length === 0) {
+      // nothing in text area
+      return { isValid: false, message: "Please enter some text for your tweet." };
+  }
+  if (tweetText.length > 140) {
+      // tweet too long
+      return { isValid: false, message: "Your tweet is too long. Please limit your tweet to 140 characters." };
+  }
+  return { isValid: true, message: "" }; // otherwise, return true
+}
 // doc ready
 $(() => {
 
@@ -36,6 +43,8 @@ $(() => {
 //     }
 //   ]
 
+
+
   const renderTweets = function(tweets) {
     // empty the container before appending new tweets to avoid duplicates
     const $container = $('#tweets-container');
@@ -50,7 +59,7 @@ $(() => {
 
 const createTweetElement = function(tweet) {
   const { user, content, created_at } = tweet;
-  // format the creation date using JavaScript's Date constructor
+  // format the creation date using date constructor
   const dateCreated = new Date(created_at);
   const currentDate = new Date();
   let timeAgo = timeago.format(new Date(created_at));
@@ -90,21 +99,18 @@ const createTweetElement = function(tweet) {
 $('.new-tweet form').submit(function(event) {
   event.preventDefault(); // stop normal submit (refresh)
 
-  const tweetText = $('#tweet-text').val().trim(); //get content from text
+  const tweetText = $('#tweet-text').val();
+  const validationResult = isTweetValid(tweetText);
 
-
-  if (tweetText.length === 0) {
-    alert("Please enter some text for your tweet.");
-    return; // if tweet is empty, give this alert
+  if (!validationResult.isValid) {
+    // Display the error message near the tweet input area
+    $('#tweet-error-message').text(validationResult.message).show();
+    return; // Stop the function if the tweet is invalid
+} else {
+    // Hide the error message if the tweet passes validation
+    $('#tweet-error-message').hide();
 }
 
-// if tweet exceeds 140 characters
-if (tweetText.length > 140) {
-    alert("Your tweet is too long. Please limit your tweet to 140 characters.");
-    return; // stop the function here
-}
-
-// if it passes both,then serialize the data and continue
 const formData = $(this).serialize(); 
 
   $.ajax({

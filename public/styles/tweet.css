@@ -117,57 +117,13 @@
 .tweet-header-right {
   justify-content: flex-end; /* Aligns the handle to the right */
 }
-/* .tweet {
-  border-bottom: 1px solid #ccc;
-  padding: 30px 15px;
-  position: relative;
-  transition: box-shadow 0.3s ease; 
-  
-} */
 
-/*
-.tweet:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+#tweet-error-message {
+  display: none; /* Initially hidden */
+  color: rgb(154, 6, 6);
+  text-align: center; /* Centers the text within the container */
+  width: 100%; /* Ensure it takes up the full width if not already */
+  margin-top: 3px;
 }
-
-#tweets-container .tweet header {
-  display: flex;
-  align-items: center;
-  padding-bottom: 10px;
-background-color: #f8f9fa; 
-  height: 100px;
-
-}
-
-.tweet header .avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-.tweet header .user-info {
-  display: flex;
-  flex-direction: column;
-}
-
-.tweet header .user-name {
-  font-weight: bold;
-}
-
-.tweet header .user-handle {
-  margin: 0;
-  color: #555;
-}
-
-.tweet-text {
-  padding-bottom: 10px;
-}
-
-.tweet-text p {
-  margin: 0;
-  word-wrap: break-word; 
-}
-
 
 
