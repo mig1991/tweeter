@@ -78,7 +78,7 @@ const createTweetElement = function(tweet) {
       </div>
   </header>
   <div class="tweet-content">
-      <p>${content.text}</p>
+      <p></p>
   </div>
   <footer>
       <h3>${timeAgo}</h3>
@@ -92,6 +92,9 @@ const createTweetElement = function(tweet) {
 </article>
 
   `);
+
+  $tweet.find('.tweet-content p').text(content.text);
+
 
   return $tweet;
 };
