@@ -81,7 +81,41 @@ const createTweetElement = function(tweet) {
   return $tweet;
 };
 
-renderTweets(data);
+$('.new-tweet form').submit(function(event) {
+  event.preventDefault(); // Prevent the default form submission behavior
+  const formData = $(this).serialize(); // Serialize the form data for submission
 
+  console.log("Form Data Submitted:", formData);
+
+  $.ajax({
+      type: 'POST',
+      url: '/', // Modify if your endpoint URL is different
+      data: formData,
+      success: function(response) {
+          console.log('Tweet posted:', response);
+          loadTweets(); // Reload tweets to include the new one
+      },
+      error: function(xhr, status, error) {
+          console.error('Failed to post tweet:', error);
+      }
+  });
+});
+
+// Function to load tweets dynamically
+function loadTweets() {
+  $.ajax({
+      url: '/',
+      method: 'GET',
+      success: function(tweets) {
+          renderTweets(tweets);
+      },
+      error: function(error) {
+          console.log('Error loading tweets:', error);
+      }
+  });
+}
+
+// Initial load of tweets
+loadTweets();
 
 });
