@@ -11,8 +11,9 @@ header {
   align-items: center; /* Centers children horizontally in the header */
   height: 520px; /* Sets a fixed height for the header */
   width: 100%; /* Ensures the header extends full width of the viewport */
-  background-color: #8900bf;
-  background-image: url("https://www.transparenttextures.com/patterns/beige-paper.png");
+  background-color: #008c8c;
+background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 

@@ -4,7 +4,7 @@ nav {
   position: fixed;
   height: 120px; /* Set the height of the nav */
   width: 100vw; /* Make the nav full width of the viewport */
-  background-color: #0e246c; /* Set the default background color */
+  background-color: #053d41; /* Set the default background color */
   color: #FFFFFF; /* Set the default font color */
   padding: 0 1.5em; /* 1.5ems of space on the right and left */
   display: flex;

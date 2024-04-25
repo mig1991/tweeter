@@ -89,9 +89,23 @@ const createTweetElement = function(tweet) {
 
 $('.new-tweet form').submit(function(event) {
   event.preventDefault(); // stop normal submit (refresh)
-  const formData = $(this).serialize(); // serialize the form data for submission
 
-  console.log("Form Data Submitted:", formData);
+  const tweetText = $('#tweet-text').val().trim(); //get content from text
+
+
+  if (tweetText.length === 0) {
+    alert("Please enter some text for your tweet.");
+    return; // if tweet is empty, give this alert
+}
+
+// if tweet exceeds 140 characters
+if (tweetText.length > 140) {
+    alert("Your tweet is too long. Please limit your tweet to 140 characters.");
+    return; // stop the function here
+}
+
+// if it passes both,then serialize the data and continue
+const formData = $(this).serialize(); 
 
   $.ajax({
       type: 'POST',
