@@ -53,8 +53,9 @@ const createTweetElement = function(tweet) {
   // format the creation date using JavaScript's Date constructor
   const dateCreated = new Date(created_at);
   const currentDate = new Date();
-  let timeAgo = Math.floor((currentDate - dateCreated) / (1000 * 60 * 60 * 24));
-  timeAgo = "Posted " + timeAgo + " Days Ago";
+  let timeAgo = timeago.format(new Date(created_at));
+
+  timeAgo = "Posted " + timeAgo;
   // using template literals
   let $tweet = $(`
   <article class="tweet-container">
@@ -122,5 +123,5 @@ function loadTweets() {
 
 // load tweets
 loadTweets();
-renderTweets(data);
+
 });
