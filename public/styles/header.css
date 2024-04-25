@@ -27,4 +27,24 @@ header h2 {
   flex-direction: column;
   align-items: center;
   padding-top: 150px;
+  
+}
+
+header img.graffiti {
+  position: absolute;
+  height: auto; /* Maintain the aspect ratio */
+  top: 41%; /* Center vertically */
+  right: 63%; /* Center horizontally */
+  opacity: 0.5; /* 50% transparency */
+
+
+}
+header img.graffiti2 {
+  position: absolute;
+  height: auto; /* Maintain the aspect ratio */
+  top: 45%; /* Center vertically */
+  left: 63%; /* Center horizontally */
+  opacity: 0.5; /* 50% transparency */
+
+
 }
