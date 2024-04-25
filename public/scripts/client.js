@@ -12,29 +12,29 @@
 // doc ready
 $(() => {
 
-const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png",
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ]
+// const data = [
+//     {
+//       "user": {
+//         "name": "Newton",
+//         "avatars": "https://i.imgur.com/73hZDYK.png",
+//         "handle": "@SirIsaac"
+//       },
+//       "content": {
+//         "text": "If I have seen further it is by standing on the shoulders of giants"
+//       },
+//       "created_at": 1461116232227
+//     },
+//     {
+//       "user": {
+//         "name": "Descartes",
+//         "avatars": "https://i.imgur.com/nlhLi3I.png",
+//         "handle": "@rd" },
+//       "content": {
+//         "text": "Je pense , donc je suis"
+//       },
+//       "created_at": 1461113959088
+//     }
+//   ]
 
   const renderTweets = function(tweets) {
     // empty the container before appending new tweets to avoid duplicates
@@ -53,47 +53,47 @@ const createTweetElement = function(tweet) {
   // format the creation date using JavaScript's Date constructor
   const dateCreated = new Date(created_at);
   const currentDate = new Date();
-  const timeAgo = Math.floor((currentDate - dateCreated) / (1000 * 60 * 60 * 24)); // Convert to day
-  // create the tweet article element using template literals
+  const timeAgo = Math.floor((currentDate - dateCreated) / (1000 * 60 * 60 * 24)); 
+  // using template literals
   let $tweet = $(`
-    <article class="tweet">
+      <article class="tweet-container">
       <header>
-        <div class="tweet-header">
-          <img src="${user.avatars}" alt="User avatar" class="tweet-avatar">
-          <span class="tweet-user-name">${user.name}</span>
-          <span class="tweet-user-handle">${user.handle}</span>
-        </div>
+      <img src="${user.avatars}" alt="User avatar" class="tweet-avatar">
+          <h2>${user.name}</h2>
+          <h3>${user.handle}</h3>
       </header>
       <div class="tweet-content">
-        <p>${content.text}</p>
+          <p>${content.text}</p>
       </div>
       <footer>
-        <span class="tweet-time">${timeAgo} days ago</span>
-        <div class="tweet-icons">
-          <i class="fas fa-flag"></i>
-          <i class="fas fa-retweet"></i>
-          <i class="fas fa-heart"></i>
-        </div>
+          <h3>${timeAgo}</h3>
+          <div class="footer-icons">
+              <i class="fas fa-heart"></i>
+              <i class="fas fa-flag"></i>
+              <i class="fas fa-retweet"></i>
+              <i class="fas fa-share"></i>
+          </div>
       </footer>
     </article>
+    
   `);
 
   return $tweet;
 };
 
 $('.new-tweet form').submit(function(event) {
-  event.preventDefault(); // Prevent the default form submission behavior
-  const formData = $(this).serialize(); // Serialize the form data for submission
+  event.preventDefault(); // stop normal submit (refresh)
+  const formData = $(this).serialize(); // serialize the form data for submission
 
   console.log("Form Data Submitted:", formData);
 
   $.ajax({
       type: 'POST',
-      url: '/', // Modify if your endpoint URL is different
+      url: '/tweets',
       data: formData,
       success: function(response) {
           console.log('Tweet posted:', response);
-          loadTweets(); // Reload tweets to include the new one
+          loadTweets();
       },
       error: function(xhr, status, error) {
           console.error('Failed to post tweet:', error);
@@ -101,10 +101,10 @@ $('.new-tweet form').submit(function(event) {
   });
 });
 
-// Function to load tweets dynamically
+// load tweets dynamically
 function loadTweets() {
   $.ajax({
-      url: '/',
+      url: '/tweets',
       method: 'GET',
       success: function(tweets) {
           renderTweets(tweets);
@@ -115,7 +115,7 @@ function loadTweets() {
   });
 }
 
-// Initial load of tweets
+// load tweets
 loadTweets();
-
+renderTweets(data);
 });
