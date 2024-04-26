@@ -3,7 +3,7 @@ html, body {
   height: 100%;
 }
 
-header, .new-tweet {
+header .new-tweet {
   width: 100%; /* Ensures header and section take full width */
 }
 

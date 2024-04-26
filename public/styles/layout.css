@@ -35,3 +35,55 @@ nav > span {
   padding: 30px; /* Adds padding inside the main element for better content spacing */
   box-sizing: border-box; /* Includes padding and border in the element's total width and height */
 }
+
+/*responsive design*/
+
+/* ... Existing mobile styles ... */
+
+/* Desktop styles */
+/* ... Existing mobile styles ... */
+
+/* Desktop styles */
+/* ... Existing mobile styles ... */
+
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row; /* Layout with header on the side and main content to the right */
+}
+
+header {
+  margin-top: 250px;
+  margin-left: 200px;
+  margin-right: 100px;
+  width: 400px;
+  height: 400px;
+  justify-content: center;
+}
+
+header img.graffiti {
+  display: none;
+}
+
+header img.graffiti2 {
+  display: none;
+}
+
+.header-avatar {
+  padding: 10px;
+}
+
+main {
+  margin-top: 170px;
+  width: 55% !important;
+}
+
+.tweet-container header {
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+
+}

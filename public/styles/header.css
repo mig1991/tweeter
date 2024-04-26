@@ -11,15 +11,15 @@ header {
   align-items: center; /* Centers children horizontally in the header */
   height: 520px; /* Sets a fixed height for the header */
   width: 100%; /* Ensures the header extends full width of the viewport */
-  background-color: #008c8c;
+  background-color: #026e6e;
 background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 header h2 {
-  color: #FFFFFF; /* Sets text color to white */
-  margin-top: 20px; /* Space between the avatar image and the text */
+  color: #ffffff; /* Sets text color to white */
+  margin-top: 0px; /* Space between the avatar image and the text */
 }
 
 .header-avatar {
@@ -33,8 +33,9 @@ header h2 {
 header img.graffiti {
   position: absolute;
   height: auto; /* Maintain the aspect ratio */
-  top: 41%; /* Center vertically */
-  right: 63%; /* Center horizontally */
+  width: 250px;
+  top: 27%; /* Center vertically */
+  right: 62%; /* Center horizontally */
   opacity: 0.5; /* 50% transparency */
 
 
@@ -42,9 +43,13 @@ header img.graffiti {
 header img.graffiti2 {
   position: absolute;
   height: auto; /* Maintain the aspect ratio */
-  top: 45%; /* Center vertically */
-  left: 63%; /* Center horizontally */
+  width: 250px;
+  top: 27%; /* Center vertically */
+  left: 62%; /* Center horizontally */
   opacity: 0.5; /* 50% transparency */
 
 
 }
+
+/* ... Existing mobile styles ... */
+

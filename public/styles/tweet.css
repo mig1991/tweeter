@@ -26,8 +26,11 @@
   justify-content: space-between;
   align-items: center;
   color: black;
-  width: 100%;
+  width: 100% !important;
   margin-top: 20px;
+  margin-left: unset;
+
+
   /* padding: 20px; */
 }
 
@@ -42,10 +45,6 @@
 
 .tweet-container header h2 {
   margin-top: 0;
-
-}
-
-.tweet-container header h1 {
 
 }
 
