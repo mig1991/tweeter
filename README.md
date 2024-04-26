@@ -4,7 +4,9 @@ Tweeter is a simple, single-page Twitter clone. It is an interactive web applica
 
 This project was a chance to practice my HTML, CSS, JS, jQuery and AJAX front-end skills, as well as my Node & Express back-end skills.
 
-<img src="https://github.com/mig1991/tweeter/blob/master/docs/mobile-view.gif?raw=true" width="600" height="600" alt="Mobile-View">
+### Desktop View
+
+![Desktop-View](https://github.com/mig1991/tweeter/blob/master/docs/DesktopView.gif?raw=true)
 
 
 
@@ -33,4 +35,6 @@ This project was a chance to practice my HTML, CSS, JS, jQuery and AJAX front-en
    npm install
    npm run local
 
-![Mobile-View](https://github.com/mig1991/tweeter/blob/master/docs/mobile-view.gif?raw=true)
+### Mobile View
+
+![Mobile-View](https://github.com/mig1991/tweeter/blob/master/docs/MobileView.gif?raw=true)
