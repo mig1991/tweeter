@@ -97,6 +97,7 @@ const formData = $(this).serialize();
       data: formData,
       success: function(response) {
           console.log('Tweet posted:', response);
+          $('#tweet-text').val(''); // Clear the tweet text field after successful posting
           loadTweets();
       },
       error: function(xhr, status, error) {

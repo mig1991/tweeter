@@ -1,18 +1,31 @@
 # Tweeter Project
 
-Tweeter is a simple, single-page Twitter clone.
+Tweeter is a simple, single-page Twitter clone. It is an interactive web application that allows users to post tweets and view tweets from other *imaginary* members. It provides a streamlined interface for real-time tweet sharing and viewing within an *imaginary* community.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
+This project was a chance to practice my HTML, CSS, JS, jQuery and AJAX front-end skills, as well as my Node & Express back-end skills.
 
-## Getting Started
+## Features
 
-1. [Create](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template) a new repository using this repository as a template.
-2. Clone your repository onto your local device.
-3. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
-4. Go to <http://localhost:8080/> in your browser.
+- **Tweet Posting**: Users can type their message into a text box and post it to the main page.
+- **Tweet Feed**: All posted tweets are displayed on the main page, allowing users to see messages from others in real time.
+- **Dynamic Tweets**: No need to refresh. When a tweet is submitted, it is posted without requiring you to refresh your browser. 
 
-## Dependencies
+## Technologies Used
+
+- Frontend: HTML, CSS, JavaScript
+- Backend: Node.js, Express
+
+## Dependencies 
 
 - Express
 - Node 5.10.x or above
+- Body-Parser
+
+## Setup Instructions
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/mig1991/tweeter.git
+   cd tweeter
+   npm install
+   npm start
+

@@ -6,9 +6,6 @@
 html {
   box-sizing: border-box;
 }
-/* *, *:before, *:after {
-  box-sizing: inherit;
-} */
 
 /*
  * Global layout stuff
@@ -36,15 +33,9 @@ nav > span {
   box-sizing: border-box; /* Includes padding and border in the element's total width and height */
 }
 
+
+
 /*responsive design*/
-
-/* ... Existing mobile styles ... */
-
-/* Desktop styles */
-/* ... Existing mobile styles ... */
-
-/* Desktop styles */
-/* ... Existing mobile styles ... */
 
 /* Desktop styles */
 @media only screen and (min-width: 1024px) {
@@ -88,7 +79,5 @@ main {
   display: flex;
   justify-content: flex-start;
 }
-
-
 
 }
