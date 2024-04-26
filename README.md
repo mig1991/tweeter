@@ -6,7 +6,7 @@ This project was a chance to practice my HTML, CSS, JS, jQuery and AJAX front-en
 
 ### Desktop View
 
-![Desktop-View](https://github.com/mig1991/tweeter/blob/master/docs/DesktopView.gif?raw=true)
+![Desktop-View](https://github.com/mig1991/tweeter/blob/master/docs/desktopgif.gif?raw=true)
 
 
 
@@ -37,4 +37,4 @@ This project was a chance to practice my HTML, CSS, JS, jQuery and AJAX front-en
 
 ### Mobile View
 
-![Mobile-View](https://github.com/mig1991/tweeter/blob/master/docs/MobileView.gif?raw=true)
+![Mobile-View](https://github.com/mig1991/tweeter/blob/master/docs/mobilegif.gif?raw=true)
