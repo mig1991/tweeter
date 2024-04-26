@@ -60,6 +60,11 @@ header {
   width: 400px;
   height: 400px;
   justify-content: center;
+  
+}
+
+body > header:hover {
+  box-shadow: 15px 15px 15px -5px rgba(0, 0, 0, 0.5);
 }
 
 header img.graffiti {
