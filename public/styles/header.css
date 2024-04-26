@@ -11,8 +11,9 @@ header {
   align-items: center; /* Centers children horizontally in the header */
   height: 520px; /* Sets a fixed height for the header */
   width: 100%; /* Ensures the header extends full width of the viewport */
+  position: relative;
   background-color: #026e6e;
-background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
+  background-image: url("https://www.transparenttextures.com/patterns/brick-wall-dark.png");
 /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
@@ -34,7 +35,7 @@ header img.graffiti {
   position: absolute;
   height: auto; /* Maintain the aspect ratio */
   width: 250px;
-  top: 27%; /* Center vertically */
+  top: 55%; /* Center vertically */
   right: 62%; /* Center horizontally */
   opacity: 0.5; /* 50% transparency */
 
@@ -44,7 +45,7 @@ header img.graffiti2 {
   position: absolute;
   height: auto; /* Maintain the aspect ratio */
   width: 250px;
-  top: 27%; /* Center vertically */
+  top: 55%; /* Center vertically */
   left: 62%; /* Center horizontally */
   opacity: 0.5; /* 50% transparency */
 
