@@ -74,6 +74,12 @@ const createTweetElement = function(tweet) {
   return $tweet;
 };
 
+
+
+
+
+
+
 $('.new-tweet form').submit(function(event) {
   event.preventDefault(); // stop normal submit (refresh)
 
@@ -81,11 +87,11 @@ $('.new-tweet form').submit(function(event) {
   const validationResult = isTweetValid(tweetText);
 
   if (!validationResult.isValid) {
-    // Display the error message near the tweet input area
+    // display the error message near the tweet input area
     $('#tweet-error-message').text(validationResult.message).show();
-    return; // Stop the function if the tweet is invalid
+    return; // stop the function if the tweet is invalid
 } else {
-    // Hide the error message if the tweet passes validation
+    // hide the error message if the tweet passes validation
     $('#tweet-error-message').hide();
 }
 
@@ -98,6 +104,7 @@ const formData = $(this).serialize();
       success: function(response) {
           console.log('Tweet posted:', response);
           $('#tweet-text').val(''); // Clear the tweet text field after successful posting
+          $('.counter').text(140);  // Reset the counter to 140
           loadTweets();
       },
       error: function(xhr, status, error) {
