@@ -4,6 +4,9 @@ Tweeter is a simple, single-page Twitter clone. It is an interactive web applica
 
 This project was a chance to practice my HTML, CSS, JS, jQuery and AJAX front-end skills, as well as my Node & Express back-end skills.
 
+![Desktop-View](https://github.com/mig1991/tweeter/blob/master/docs/desktop-view.gif?raw=true)
+![Mobile-View](https://github.com/mig1991/tweeter/blob/master/docs/mobile-view.gif?raw=true)
+
 ## Features
 
 - **Tweet Posting**: Users can type their message into a text box and post it to the main page.
